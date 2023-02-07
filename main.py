@@ -15,13 +15,13 @@ asyncio.set_event_loop(loop)
 
 
 def flv_to_mp4(path):
+    sys.stdout.write('Processing...\n')
+    sys.stdout.flush()
+
     if not os.path.exists(path):
         sys.stderr.write('\nFile not exists\n')
         sys.stderr.flush()
         return
-
-    sys.stdout.write('Processing...\n')
-    sys.stdout.flush()
 
     # FFMPEG 路径
     file_path = os.path.dirname(__file__)
