@@ -17,7 +17,7 @@ asyncio.set_event_loop(loop)
 def flv_to_mp4(path):
     if not os.path.exists(path):
         sys.stderr.write('\nFile not exists\n')
-        sys.stdout.flush()
+        sys.stderr.flush()
         return
 
     sys.stdout.write('Processing...\n')
