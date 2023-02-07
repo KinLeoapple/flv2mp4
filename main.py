@@ -137,5 +137,5 @@ if __name__ == '__main__':
     flv_to_mp4(sys.stdin.readline()[:-1])
     sys.stdin.flush()
     end = time.perf_counter()
-    sys.stdout.write('\nRunning time: %s Seconds' % (end - start))
+    sys.stdout.write('\nRunning time: %s Seconds' % round((end - start), 2))
     sys.stdout.flush()
