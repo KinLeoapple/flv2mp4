@@ -75,7 +75,7 @@ def flv_to_mp4(path):
                                        encoding="utf-8",
                                        text=True)
 
-            lsat_progress = 0
+            last_progress = 0
             is_init = False
 
             widgets = [
@@ -103,7 +103,7 @@ def flv_to_mp4(path):
                     if progress >= 100:
                         progress = 100
                     progress = round(progress, 1)
-                    if lsat_progress < progress <= 100:
+                    if last_progress < progress <= 100:
                         bar.update(progress)
                         progressbar.streams.flush()
                         lsat_progress = progress
